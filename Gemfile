@@ -31,6 +31,7 @@ end
 group :development do
   gem "capistrano"
 end
+gem 'capistrano-bundler'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
