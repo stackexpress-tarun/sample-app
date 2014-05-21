@@ -13,7 +13,7 @@ set :stages, %w(production staging)
 set :application, "sample_app"
 # set :repository
 set :repo_url, "git@github.com:stackexpress-tarun/sample-app.git"
-set :deploy_to, '/home/vagrant/app'
+set :deploy_to, '/home/vagrant/app/sample_app'
 set :scm, :git
 set :branch, 'master'
 set :user, 'vagrant'
@@ -24,11 +24,11 @@ set :use_sudo, true
 set :rails_env,       "production"
 # set :ssh_options, {:forward_agent => true}
 role :web, "192.168.33.10"                          # Your HTTP server, Apache/etc
-# role :app, "192.168.33.10"                          # This may be the same as your `Web` server
+role :app, "192.168.33.10"                          # This may be the same as your `Web` server
 # role :db,  "192.168.10.23", :primary => true
 # default_run_options[:shell] = 'bash'
 
-after "deploy:restart", "deploy:cleanup"
+# after "deploy:restart", "deploy:cleanup"
 
 # namespace :deploy do
 
