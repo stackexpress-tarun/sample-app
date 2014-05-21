@@ -1,6 +1,6 @@
 worker_processes 4
 preload_app true
-user 'vagreant'
+user 'vagrant'
 root = "/home/vagrant/app/sample_app/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
