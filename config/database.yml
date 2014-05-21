@@ -8,6 +8,8 @@ default: &default
   adapter: mysql2
   pool: 5
   timeout: 5000
+  username: root
+  username: root
   host: 192.168.10.22
 
 development:
