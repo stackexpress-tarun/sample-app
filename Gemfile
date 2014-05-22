@@ -1,10 +1,22 @@
 source 'https://rubygems.org'
 
-
+# msql_v="0.3.11",  platforms: [:mingw, :mswin]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+# group :production do
+# 	msql_v="0.3.16"
+# end
+
+msql_v="0.3.16"
+# msql_v="0.3.11"
+
+platforms :mswin do
+	msql_v="0.3.11"
+end
+
+gem 'mysql2', "#{msql_v}"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -32,7 +44,6 @@ group :development do
   gem "capistrano"
 	gem 'capistrano-bundler'
 	gem 'capistrano-rvm'
-	gem 'capistrano-colors'
 end
 
 # Use ActiveModel has_secure_password
