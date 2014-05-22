@@ -10,7 +10,7 @@ default: &default
   timeout: 5000
   username: root
   password: root
-  host: 192.168.22.10
+  host: 192.168.10.22
 
 development:
   <<: *default
