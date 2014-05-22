@@ -9,8 +9,8 @@ default: &default
   pool: 5
   timeout: 5000
   username: root
-  username: root
-  # host: 192.168.10.22
+  password: root
+  host: 192.168.33.10
 
 development:
   <<: *default
